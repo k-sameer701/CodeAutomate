@@ -20,7 +20,7 @@
         <label for="html_icon"><img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo"></label>
         <br>
     
-        <input id="btn" type="submit" value="Submit">
+        <input type="submit" value="Submit">
     </form>
     
     <!-- Checking form inputs after submission -->
@@ -30,6 +30,9 @@
         {% endif %}
 
         
+    {% if fav_language == "HTML" %}
+        <p>&lt; img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo" / &gt;</p>
+    {% endif %}
     
 </body>
 </html>
