@@ -2,13 +2,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Input Display</title>
-    <link rel="stylesheet" href=" {% static 'styles.css' %}">
+    <link rel="stylesheet" href=" {% static 'styles.css' %} ">
 </head>
 <body>
-    <h1>Enter your text:</h1>
     
-    <form method="POST">
+    <div class="main">
+
+        <div class="rapper">
+            <h2 class="title">Contact Us Form</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <input class="item" type="text" placeholder="First Name">
+                <div class="same">
+                    <input class="item" type="text" placeholder="Email Address">
+                    <input class="item" type="text" placeholder="Website Name">
+                </div>
+                <input class="item" type="text" placeholder="Write your message">
+            </form>
+        </div>
+        <button class="btn">Submit</button>
+    </div>
+
+    {% comment %} <form method="POST">
         {% csrf_token %}
         <textarea name="text_input" rows="5" cols="30"></textarea><br>
     
@@ -16,12 +34,12 @@
         <br>
     
         <!-- Radio button for HTML icon selection -->
-        <input type="radio" id="html_icon" name="fav_language" value="HTML">
-        <label for="html_icon"><img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo"></label>
+        <input type="radio" id="dev_to_icon" name="icon_1" value="dev_to">
+        <label for="dev_to_icon"><img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo"></label>
         <br>
     
         <input type="submit" value="Submit">
-    </form>
+    </form> {% endcomment %}
     
     <!-- Checking form inputs after submission -->
     {% if text_input %}
@@ -30,7 +48,7 @@
         {% endif %}
 
         
-    {% if fav_language == "HTML" %}
+    {% if icon_1 == "dev_to" %}
         <p>&lt; img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo" / &gt;</p>
     {% endif %}
     
