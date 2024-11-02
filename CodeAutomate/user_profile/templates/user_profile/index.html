@@ -12,23 +12,84 @@
     <div class="main">
 
         <div class="rapper">
-            <h2 class="title">Contact Us Form</h2>
+            <h2 class="title">Create Readme</h2>
             <form method="POST">
                 {% csrf_token %}
 
-                <input name="firstName" class="item" type="text" placeholder="First Name">
+                <input name="fullName" class="item" type="text" placeholder="Hii there 👋, I'm ">
 
-                <div class="same">
-                    <input name="email" class="item" type="text" placeholder="Email Address">
-                    <input name="website" class="item" type="text" placeholder="Website Name">
-                </div>
-                <input name="bio" class="item" type="text" placeholder="Write your message">
+                <input name="currentLearning" class="item" type="text" placeholder="🪲 I'm currently Learning ">
 
-                <div class="icons">
-                    <!-- Radio button for HTML icon selection -->
+                <input name="askMe" class="item" type="text" placeholder="🦉 Ask Me About ">
+
+                <input name="email" class="item" type="text" placeholder="📫 How to reach me: ">
+
+                <input name="website" class="item" type="text" placeholder="🌏 Find my projects on ">
+
+                <input name="articles" class="item" type="text" placeholder="📑 I write articles on ">
+
+                <input name="experience" class="item" type="text" placeholder="🥷 Know about my experience ">
+
                 
-                <input type="radio" id="dev_to_icon" name="icon_1" value="dev_to">
-                <label for="dev_to_icon"><img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo"></label>
+
+                {% comment %} <div class="same">
+                    <input name="email" class="item" type="text" placeholder="📫 How to reach me: ">
+                    <input name="website" class="item" type="text" placeholder="Website Name">
+                </div> {% endcomment %}
+
+
+                {% comment %} <input name="bio" class="item" type="text" placeholder="Write your message"> {% endcomment %}
+
+                <!-- Radio button for HTML icon selection -->
+                <div class="icons">
+                    <h3 class="title">Skills</h3>
+
+                    <p>Programming Languages</p>
+
+                    <br/>
+                    <input type="radio" id="c_lang" name="lang_1" value="c_lang">
+                    <label for="c_lang"><img src="https://skillicons.dev/icons?i=c" height="46" alt="C Language logo"></label>
+
+                    <input type="radio" id="cpp_lang" name="lang_2" value="cpp_lang">
+                    <label for="cpp_lang"><img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ Language logo"></label>
+
+
+                    <p>Frontend Development</p>
+                    <br/>
+
+                    <p>Backend Development</p>
+                    <br/>
+
+                    <p>Mobile App Development</p>
+                    <br/>
+
+                    <p>Artificial Intelligence - Machine Learning</p>
+                    <br/>
+
+                    <p>Database</p>
+                    <br/>
+
+                    <p>Data Visualisation</p>
+                    <br/>
+
+                    <p>DevOps</p>
+                    <br/>
+
+                    <p>Backend As Service</p>
+                    <br/>
+
+                    <p>Testing</p>
+                    <br/>
+
+                    <p>Game Engine</p>
+                    <br/>
+
+                    <p>Automation</p>
+                    <br/>
+                
+
+                    <input type="radio" id="dev_to_icon" name="icon_1" value="dev_to">
+                    <label for="dev_to_icon"><img src="https://skillicons.dev/icons?i=devto" height="46" alt="devto logo"></label>
                 </div>
                 
                 
@@ -58,21 +119,44 @@
     
     <!-- Checking form inputs after submission -->
      <div class="output">
-        {% if firstName %}
-        <h2>Your entered text:</h2>
-        <p>&lt; h1 &gt; {{ firstName }} &lt; &#47; h1 &gt;</p>
+        {% if fullName %}
+        <p>&lt; p &gt; Hii there 👋, I'm  {{ fullName }} &lt; &#47; p &gt;</p>
+        {% endif %}
+
+        {% if currentLearning %}
+        <p>&lt; p &gt; 🪲 I'm currently Learning   {{ currentLearning }} &lt; &#47; p &gt;</p>
+        {% endif %}
+
+        {% if askMe %}
+        <p>&lt; p &gt; 🦉 Ask Me About {{ askMe }} &lt; &#47; p &gt;</p>
         {% endif %}
 
         {% if email %}
-        <p>&lt; p1 &gt; {{ email }} &lt; &#47; p1 &gt;</p>
+        <p>&lt; p1 &gt; 📫 How to reach me: {{ email }} &lt; &#47; p1 &gt;</p>
         {% endif %}
 
         {% if website %}
-        <p>&lt; p1 &gt; {{ website }} &lt; &#47; p1 &gt;</p>
+        <p>&lt; p1 &gt; 🌏 Find my projects on {{ website }} &lt; &#47; p1 &gt;</p>
         {% endif %}
 
-        {% if bio %}
-        <p>&lt; p1 &gt; {{ bio }} &lt; &#47; p1 &gt;</p>
+        {% if articles %}
+        <p>&lt; p &gt; 📑 I write articles on {{ articles }} &lt; &#47; p &gt;</p>
+        {% endif %}
+
+        {% if experience %}
+        <p>&lt; p &gt; 🥷 Know about my experience {{ experience }} &lt; &#47; p &gt;</p>
+        {% endif %}
+
+        {% comment %} PROGRAMMING LANGUAGE {% endcomment %}
+
+        {% if lang_1 == "c_lang" %}
+        <p>&lt; img src="https://skillicons.dev/icons?i=c" height="46" alt="C language logo"  &#47; &gt;</p>
+        <p>&lt; img width="8" &#47; &gt; </p>
+        {% endif %}
+
+        {% if lang_2 == "cpp_lang" %}
+        <p>&lt; img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ language logo"  &#47; &gt;</p>
+        <p>&lt; img width="8" &#47; &gt; </p>
         {% endif %}
             
         {% if icon_1 == "dev_to" %}
