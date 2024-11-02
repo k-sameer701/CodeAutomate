@@ -44,6 +44,20 @@ def index(request):
         # PROGRAMMING LANGUGAGE
         lang_1 = request.POST.get('lang_1')
         lang_2 = request.POST.get('lang_2')
+        lang_3 = request.POST.get('lang_3')
+        lang_4 = request.POST.get('lang_4')
+        lang_5 = request.POST.get('lang_5')
+        lang_6 = request.POST.get('lang_6')
+        lang_7 = request.POST.get('lang_7')
+        lang_8 = request.POST.get('lang_8')
+        lang_9 = request.POST.get('lang_9')
+        lang_10 = request.POST.get('lang_10')
+        lang_11 = request.POST.get('lang_11')
+        lang_12 = request.POST.get('lang_12')
+        lang_13 = request.POST.get('lang_13')
+        lang_14 = request.POST.get('lang_14')
+        lang_15 = request.POST.get('lang_15')
+        lang_16 = request.POST.get('lang_16')
 
         # Get the value of the selected radio button
         icon_1 = request.POST.get('icon_1')
@@ -64,6 +78,20 @@ def index(request):
      
         context['lang_1'] = lang_1
         context['lang_2'] = lang_2
+        context['lang_3'] = lang_3
+        context['lang_4'] = lang_4
+        context['lang_5'] = lang_5
+        context['lang_6'] = lang_6
+        context['lang_7'] = lang_7
+        context['lang_8'] = lang_8
+        context['lang_9'] = lang_9
+        context['lang_10'] = lang_10
+        context['lang_11'] = lang_11
+        context['lang_12'] = lang_12
+        context['lang_13'] = lang_13
+        context['lang_14'] = lang_14
+        context['lang_15'] = lang_15
+        context['lang_16'] = lang_16
         context['icon_1'] = icon_1
 
     # Render the template with the context
