@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
 def index(request):
-    
-
     # Initialize context dictionary
     context = {}
 
@@ -34,10 +32,6 @@ def index(request):
         # Get the fullName input
         currentLearning = request.POST.get('currentLearning')
 
-        
-
-        
-
         # Get the bio input
         bio = request.POST.get('bio')
 
@@ -59,6 +53,34 @@ def index(request):
         lang_15 = request.POST.get('lang_15')
         lang_16 = request.POST.get('lang_16')
 
+        # FRONTEND LANGUGAGE
+        fe_1 = request.POST.get('fe_1')
+        fe_2 = request.POST.get('fe_2')
+        fe_3 = request.POST.get('fe_3')
+        fe_4 = request.POST.get('fe_4')
+        fe_5 = request.POST.get('fe_5')
+        fe_6 = request.POST.get('fe_6')
+        fe_7 = request.POST.get('fe_7')
+        fe_8 = request.POST.get('fe_8')
+        fe_9 = request.POST.get('fe_9')
+        fe_10 = request.POST.get('fe_10')
+        fe_11 = request.POST.get('fe_11')
+        fe_12 = request.POST.get('fe_12')
+        fe_13 = request.POST.get('fe_13')
+        fe_14 = request.POST.get('fe_14')
+
+        # BACKEND LANGUGAGE
+        be_1 = request.POST.get('be_1')
+        be_2 = request.POST.get('be_2')
+        be_3 = request.POST.get('be_3')
+        be_4 = request.POST.get('be_4')
+
+        # MOBILE LANGUAGE
+        mobile_1 = request.POST.get('mobile_1')
+        mobile_2 = request.POST.get('mobile_2')
+        mobile_3 = request.POST.get('mobile_3')
+        mobile_4 = request.POST.get('mobile_4')
+
         # Get the value of the selected radio button
         icon_1 = request.POST.get('icon_1')
 
@@ -71,11 +93,8 @@ def index(request):
         context['articles'] = articles
         context['experience'] = experience
       
+        # PROGRAMMING LANGUAGE 
 
-
-        
-        
-     
         context['lang_1'] = lang_1
         context['lang_2'] = lang_2
         context['lang_3'] = lang_3
@@ -92,7 +111,34 @@ def index(request):
         context['lang_14'] = lang_14
         context['lang_15'] = lang_15
         context['lang_16'] = lang_16
-        context['icon_1'] = icon_1
+
+        # FRONT-END
+        context['fe_1'] = fe_1
+        context['fe_2'] = fe_2
+        context['fe_3'] = fe_3
+        context['fe_4'] = fe_4
+        context['fe_5'] = fe_5
+        context['fe_6'] = fe_6
+        context['fe_7'] = fe_7
+        context['fe_8'] = fe_8
+        context['fe_9'] = fe_9
+        context['fe_10'] = fe_10
+        context['fe_11'] = fe_11
+        context['fe_12'] = fe_12
+        context['fe_13'] = fe_13
+        context['fe_14'] = fe_14
+       
+        # BACKEND LANGUAGE
+        context['be_1'] = be_1
+        context['be_2'] = be_2
+        context['be_3'] = be_3
+        context['be_4'] = be_4
+
+        # MOBILE LANGUAGE
+        context['mobile_1'] = mobile_1
+        context['mobile_2'] = mobile_2
+        context['mobile_3'] = mobile_3
+        context['mobile_4'] = mobile_4
 
     # Render the template with the context
     return render(request, 'user_profile/index.html', context)
