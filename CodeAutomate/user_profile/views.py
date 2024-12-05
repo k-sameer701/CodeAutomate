@@ -223,5 +223,113 @@ def index(request):
         context['bas_3'] = bas_3
         context['bas_4'] = bas_4
 
+        # SOCIAL LINKS
+
+        # Get the GitHub input
+        github = request.POST.get('github')
+
+        # Get the Dev.to input
+        devto = request.POST.get('devto')
+
+        # Get the Twitter input
+        twitter = request.POST.get('twitter')
+
+        # Get the LinkedIn input
+        linkedin = request.POST.get('linkedin')
+
+        # Get the StackOverflow input
+        stackoverflow = request.POST.get('stackoverflow')
+
+        # Get the CodeSandbox input
+        codesandbox = request.POST.get('codesandbox')
+
+        # Get the Kaggle input
+        kaggle = request.POST.get('kaggle')
+
+        # Get the Facebook input
+        facebook = request.POST.get('facebook')
+
+        # Get the Instagram input
+        instagram = request.POST.get('instagram')
+
+        # Get the Dribbble input
+        dribbble = request.POST.get('dribbble')
+
+        # Get the Behance input
+        behance = request.POST.get('behance')
+
+        # Get the Hashnode input
+        hashnode = request.POST.get('hashnode')
+
+        # Get the Medium input
+        medium = request.POST.get('medium')
+
+        # Get the YouTube input
+        youtube = request.POST.get('youtube')
+
+        # Get the CodeChef input
+        codechef = request.POST.get('codechef')
+
+        # Get the HackerRank input
+        hackerrank = request.POST.get('hackerrank')
+
+        # Get the Codeforces input
+        codeforces = request.POST.get('codeforces')
+
+        # Get the LeetCode input
+        leetcode = request.POST.get('leetcode')
+
+        # Get the HackerEarth input
+        hackerearth = request.POST.get('hackerearth')
+
+        # Get the GeeksforGeeks input
+        geeksforgeeks = request.POST.get('geeksforgeeks')
+
+        # Get the TopCoder input
+        topcoder = request.POST.get('topcoder')
+
+        # Get the Discord input
+        discord = request.POST.get('discord')
+
+        # Update the context dictionary with the form data
+        context['github'] = github
+        context['devto'] = devto
+        context['twitter'] = twitter
+        context['linkedin'] = linkedin
+        context['stackoverflow'] = stackoverflow
+        context['codesandbox'] = codesandbox
+        context['kaggle'] = kaggle
+        context['facebook'] = facebook
+        context['instagram'] = instagram
+        context['dribbble'] = dribbble
+        context['behance'] = behance
+        context['hashnode'] = hashnode
+        context['medium'] = medium
+        context['youtube'] = youtube
+        context['codechef'] = codechef
+        context['hackerrank'] = hackerrank
+        context['codeforces'] = codeforces
+        context['leetcode'] = leetcode
+        context['hackerearth'] = hackerearth
+        context['geeksforgeeks'] = geeksforgeeks
+        context['topcoder'] = topcoder
+        context['discord'] = discord
+
+        # GITHUB SPECIALS
+
+
+        special_1 = request.POST.get('special_1')
+        special_2 = request.POST.get('special_2')
+        special_3 = request.POST.get('special_3')
+        special_4 = request.POST.get('special_4')
+        special_5 = request.POST.get('special_5')
+
+        context['special_1'] = special_1
+        context['special_2'] = special_2
+        context['special_3'] = special_3
+        context['special_4'] = special_4
+        context['special_5'] = special_5
+    
     # Render the template with the context
     return render(request, 'user_profile/index.html', context)
+
