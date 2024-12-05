@@ -8,79 +8,109 @@
     {% comment %} <link rel="stylesheet" href=" {% static 'styles.css' %} "> {% endcomment %}
 
     <style>
-        body{
+        body {
             background-color: rgb(233, 240, 238);
-        }
-        .main{
+            font-family: monospace;
+          }
+          .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: antiquewhite; */
+            height: 50px;
+            width: 78%;
+            padding: 10px;
+            overflow: hidden;
+            gap: 70px;
+            background-color: #ffffff;
+            /* background-color: #282828; */
+            box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
+            border-radius: 20px;
+          }
+          .nav a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            /* color: rgb(243, 239, 239); */
+            /* background-color: aqua; */
+            color: black;
+            padding: 10px;
+          }
+          .nav a:hover {
+            font-size: 22px;
+          }
+          .main {
             height: 100%;
             width: 100%;
             background-color: rgb(233, 240, 238);
+            /* background-color: #1A1A1A; */
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        }
-        .rapper{
+          }
+          .rapper {
             margin: 10px;
             height: 80%;
             width: 80%;
             background: #ffffff;
+            /* background-color: #1A1A1A; */
             box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
             border-radius: 20px;
-        }
-        .title{
+            color: black;
+          }
+          .title {
             text-align: center;
             font-size: 40px;
             padding-top: 10px;
-    }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        justify-content: center;
-        margin-top: 10%;
-        margin-left: 5%;
-        gap: 40px;
-     }
-        .item{
-        width: 100%;
-        padding: 15px 10px;
-        margin: 8px 0;
-        border: none;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.575);
-        font-weight: 600;
-        }
-
-        .same{
-        display: flex;
-        gap: 15px;
-        }
-
-        .btn{
-        margin: 25px;
-        padding: 15px 380px;
-        background: rgb(196, 191, 191);
-        border: none;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: large;
-        width: 80%;
-        
-        }
-        .output{
+          }
+    
+          form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            justify-content: center;
+            margin-top: 10%;
+            margin-left: 5%;
+            gap: 40px;
+          }
+          .item {
+            width: 100%;
+            padding: 15px 10px;
+            margin: 8px 0;
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.575);
+            font-weight: 600;
+          }
+    
+          .same {
+            display: flex;
+            gap: 15px;
+          }
+    
+          .btn {
+            margin: 25px;
+            padding: 15px 380px;
+            background: rgb(196, 191, 191);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: large;
+            width: 80%;
+          }
+          .output {
             padding: 10px;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: start;
-        }
-        .output-ka-baap{
+          }
+          .output-ka-baap {
             display: flex;
             width: 80%;
             margin: auto;
-        }
-        .output-ka-dada{
+          }
+          .output-ka-dada {
             margin: 10px;
             height: 80%;
             width: 80%;
@@ -88,7 +118,7 @@
             box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
             border-radius: 20px;
             margin: auto;
-        }
+          }
 
     </style>
 
@@ -96,7 +126,12 @@
 <body>
     
     <div class="main">
-
+        <div class="nav">
+            <a href="">Profile</a>
+            <a href="">Project</a>
+            <a href="">Code Editor</a>
+            <a href="">AI Bot</a>
+          </div>
         <div class="rapper">
             <h2 class="title">Create MarkDown</h2>
             <form method="POST">
