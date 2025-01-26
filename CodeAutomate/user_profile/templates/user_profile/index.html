@@ -548,447 +548,601 @@
      <div class="output-ka-dada">
         <div class="output-ka-baap">
             <div class="output">
-                {% if fullName %}
-                <p>&lt;p&gt; Hii there 👋, I'm  {{ fullName }} &lt;&#47;p&gt;</p>
+                
+                [![MasterHead](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRCxl7GGxflQoamqaucgrH0IikHkeGrPHycfiCBAN8lU4ES7LEPkhwMOKkctGsQvP9kZXP3J5qN-xVAItkFi0er8kuJs26gVf2kwAjKcl7EeLvBSkwXveqWpWMx_kD8lryE1hmUdyk6HWJCNo_eaJ7GjoyW6UQVEfddVUJWdbrID7p30qxB3p3B22y/s1600/Android%20Devs%20Banner%20.png)](https://rishavchanda.io)
+
+                {% if fullName or currentLearning or askMe or email or website or articles or experience %}
+
+                &lt;h2&gt; &lt;/h2&gt;
+
+                    &lt;div align="left"&gt;
+
+                    &lt;img align="right" alt="coding" width="370" src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif"&gt;
+                    {% if github %}
+                        <p align="left"> &lt;img src="https://komarev.com/ghpvc/?username={{github}}&label=Profile%20views&color=0e75b6&style=flat" alt="{{github}}" /&gt;</p>
+                    {% endif %}
+
+                    {% if fullName %}
+                    <p>- Hii there 👋, I'm  {{ fullName }} </p>
+                    {% endif %}
+            
+                    {% if currentLearning %}
+                    <p>- 🪲 I'm currently Learning {{ currentLearning }} </p>
+                    {% endif %}
+            
+                    {% if askMe %}
+                    <p>- 🦉 Ask Me About {{ askMe }} </p>
+                    {% endif %}
+            
+                    {% if email %}
+                    <p>- 📫 How to reach me: {{ email }} </p>
+                    {% endif %}
+            
+                    {% if website %}
+                    <p>- 🌏 Find my projects on {{ website }} </p>
+                    {% endif %}
+            
+                    {% if articles %}
+                    <p>- 📑 I write articles on {{ articles }} </p>
+                    {% endif %}
+            
+                    {% if experience %}
+                    <p>- 🥷 Know about my experience {{ experience }} </p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+                    
                 {% endif %}
-        
-                {% if currentLearning %}
-                <p>&lt;p&gt; 🪲 I'm currently Learning   {{ currentLearning }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
-                {% if askMe %}
-                <p>&lt;p&gt; 🦉 Ask Me About {{ askMe }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
-                {% if email %}
-                <p>&lt;p&gt; 📫 How to reach me: {{ email }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
-                {% if website %}
-                <p>&lt;p&gt; 🌏 Find my projects on {{ website }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
-                {% if articles %}
-                <p>&lt;p&gt; 📑 I write articles on {{ articles }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
-                {% if experience %}
-                <p>&lt;p&gt; 🥷 Know about my experience {{ experience }} &lt;&#47;p&gt;</p>
-                {% endif %}
-        
+
                 {% comment %} PROGRAMMING LANGUAGE {% endcomment %}
-        
-                {% if lang_1 == "c_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=c" height="46" alt="C language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
+
+                {% if lang_1 or lang_2 or lang_3 or lang_4 or lang_5 or lang_6 or lang_7 or lang_8 or lang_9 or lang_10 or lang_11 or lang_12 or lang_13 or lang_14 or lang_15 or lang_16 %}
+                &lt;div align="left"&gt;
+
+                    &lt;h2&gt;PROGRAMMING LANGUAGE: &lt;/h2&gt;
+                    {% if lang_1 == "c_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=c" height="46" alt="C language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_2 == "cpp_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_3 == "csharp_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=cs" height="46" alt="C# language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_4 == "go_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=go" height="46" alt="Go language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_5 == "java_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=java" height="46" alt="Java language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_6 == "js_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=js" height="46" alt="JS language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_7 == "ts_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=ts" height="46" alt="TS language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_8 == "ruby_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="Ruby language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_9 == "scala_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=scala" height="46" alt="Scala language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_10 == "python_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=python" height="46" alt="Python language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_11 == "clojure_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=clojure" height="46" alt="Clojure language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_12 == "swift_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=swift" height="46" alt="Swift language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+            
+                    {% if lang_13 == "rust_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=rust" height="46" alt="Rust language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_14 == "r_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=r" height="46" alt="R language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_15 == "kotlin_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="Kotlin language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+            
+                    {% if lang_16 == "perl_lang" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=perl" height="46" alt="Perl language logo"  &#47;&gt;</p>
+                    <p>&lt;img width="8" &#47;&gt; </p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
+                {% comment %} Frontend Frameworks {% endcomment %}
+
+                {% if fe_1 or fe_2 or fe_3 or fe_4 or fe_5 or fe_6 or fe_7 or fe_8 or fe_9 or fe_10 or fe_11 or fe_12 or fe_13 or fe_14 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;FRONTEND: &lt;/h2&gt;
         
-                {% if lang_2 == "cpp_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_3 == "csharp_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=cs" height="46" alt="C# language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_4 == "go_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=go" height="46" alt="Go language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_5 == "java_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=java" height="46" alt="Java language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_6 == "js_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=js" height="46" alt="JS language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_7 == "ts_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=ts" height="46" alt="TS language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_8 == "ruby_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="Ruby language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_9 == "scala_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=scala" height="46" alt="Scala language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_10 == "python_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=python" height="46" alt="Python language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_11 == "clojure_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=clojure" height="46" alt="Clojure language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_12 == "swift_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=swift" height="46" alt="Swift language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-        
-                {% if lang_13 == "rust_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=rust" height="46" alt="Rust language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_14 == "r_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=r" height="46" alt="R language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_15 == "kotlin_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="Kotlin language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% if lang_16 == "perl_lang" %}
-                <p>&lt;img src="https://skillicons.dev/icons?i=perl" height="46" alt="Perl language logo"  &#47;&gt;</p>
-                <p>&lt;img width="8" &#47;&gt; </p>
-                {% endif %}
-        
-                {% comment %} PROGRAMMING LANGUAGE {% endcomment %}
-        
-                {% if fe_1 == "angular_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=angular" height="46" alt="Angular" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_2 == "bable_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=babel" height="46" alt="Babel" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_3 == "bootstrap_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=bootstrap" height="46" alt="Bootstrap" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_4 == "css_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=css" height="46" alt="CSS" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_5 == "windicss_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=windicss" height="46" alt="windicss" /&gt;</p>
-                {% endif %} 
-        
-                {% if fe_6 == "figma_fe" %}
-                    <p>&lt; src="https://skillicons.dev/icons?i=figma" height="46" alt="Figma" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_7 == "gtk_fe" %}
-                    <p>&lt; src="https://skillicons.dev/icons?i=gtk" height="46" alt="GTK" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_8 == "html_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=html" height="46" alt="HTML" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_9 == "qt_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=qt" height="46" alt="QT" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_10 == "react_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=react" height="46" alt="REACT" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_11 == "sass_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=sass" height="46" alt="SASS" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_12 == "tailwind_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=tailwind" height="46" alt="TailWind" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_13 == "vue_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=vue" height="46" alt="VUE" /&gt;</p>
-                {% endif %}
-        
-                {% if fe_14 == "vuetify_fe" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=vuetify" height="46" alt="VUETIFY" /&gt;</p>
+                    {% if fe_1 == "angular_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=angular" height="46" alt="Angular" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_2 == "bable_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=babel" height="46" alt="Babel" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_3 == "bootstrap_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=bootstrap" height="46" alt="Bootstrap" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_4 == "css_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=css" height="46" alt="CSS" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_5 == "windicss_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=windicss" height="46" alt="windicss" /&gt;</p>
+                    {% endif %} 
+            
+                    {% if fe_6 == "figma_fe" %}
+                        <p>&lt; src="https://skillicons.dev/icons?i=figma" height="46" alt="Figma" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_7 == "gtk_fe" %}
+                        <p>&lt; src="https://skillicons.dev/icons?i=gtk" height="46" alt="GTK" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_8 == "html_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=html" height="46" alt="HTML" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_9 == "qt_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=qt" height="46" alt="QT" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_10 == "react_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=react" height="46" alt="REACT" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_11 == "sass_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=sass" height="46" alt="SASS" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_12 == "tailwind_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=tailwind" height="46" alt="TailWind" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_13 == "vue_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=vue" height="46" alt="VUE" /&gt;</p>
+                    {% endif %}
+            
+                    {% if fe_14 == "vuetify_fe" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=vuetify" height="46" alt="VUETIFY" /&gt;</p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
         
                 {% comment %} BACKEND LANGUAGE {% endcomment %}
+
+                {% if be_1 or be_2 or be_3 or be_4 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;BACKEND: &lt;/h2&gt;
         
-                {% if be_1 == "express_be" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=express" height="46" alt="express" /&gt;</p>
-                {% endif %}
-        
-                {% if be_2 == "graphql_be" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=graphql" height="46" alt="graphql" /&gt;</p>
-                {% endif %}
-        
-                {% if be_3 == "nodejs_be" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=nodejs" height="46" alt="nodejs" /&gt;</p>
-                {% endif %}
-        
-                {% if be_4 == "spring_be" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=spring" height="46" alt="spring" /&gt;</p>
+                    {% if be_1 == "express_be" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=express" height="46" alt="express" /&gt;</p>
+                    {% endif %}
+            
+                    {% if be_2 == "graphql_be" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=graphql" height="46" alt="graphql" /&gt;</p>
+                    {% endif %}
+            
+                    {% if be_3 == "nodejs_be" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=nodejs" height="46" alt="nodejs" /&gt;</p>
+                    {% endif %}
+            
+                    {% if be_4 == "spring_be" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=spring" height="46" alt="spring" /&gt;</p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
         
                 {% comment %} ANDROID LANGUAGE {% endcomment %}
+
+                {% if mobile_1 or mobile_2 or mobile_3 or mobile_4 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;ANDROID AND IOS: &lt;/h2&gt;
         
-                {% if mobile_1 == "androidstudio_mobile" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=androidstudio" height="46" alt="androidstudio" /&gt;</p>
-                {% endif %}
-        
-                {% if mobile_2 == "dart_mobile" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=dart" height="46" alt="dart" /&gt;</p>
-                {% endif %}
-        
-                {% if mobile_3 == "flutter_mobile" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=flutter" height="46" alt="flutter" /&gt;</p>
-                {% endif %}
-        
-                {% if mobile_4 == "kotlin_mobile" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="kotlin" /&gt;</p>
+                    {% if mobile_1 == "androidstudio_mobile" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=androidstudio" height="46" alt="androidstudio" /&gt;</p>
+                    {% endif %}
+            
+                    {% if mobile_2 == "dart_mobile" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=dart" height="46" alt="dart" /&gt;</p>
+                    {% endif %}
+            
+                    {% if mobile_3 == "flutter_mobile" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=flutter" height="46" alt="flutter" /&gt;</p>
+                    {% endif %}
+            
+                    {% if mobile_4 == "kotlin_mobile" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="kotlin" /&gt;</p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
                 
                 {% comment %} AI-ML LANGUAGE {% endcomment %}
+
+                {% if ai_1 or ai_2 or ai_3 or ai_4 or ai_5 or ai_6 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;ARTIFICIAL INTELLIGENCE: &lt;/h2&gt;
         
-                {% if ai_1 == "sklearn_ai" %}
-                    <p>&lt;img src="https://skillicons.dev/icons?i=sklearn" height="46" alt="sklearn" /&gt;</p>
-                {% endif %}
-        
-                {% if ai_2 == "opencv_ai" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" height="46" alt="opencv" /&gt;</p>
-                {% endif %}
-        
-                {% if ai_3 == "pandas_ai" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" height="46" alt="pandas" /&gt;</p>
-                {% endif %}
-        
-                {% if ai_4 == "pytorch_ai" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" height="46" alt="pytorch" /&gt;</p>
-                {% endif %}
-        
-                {% if ai_5 == "seaborn_ai" %}
-                    <p>&lt;img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" height="46" alt="seaborn" /&gt;</p>
-                {% endif %}
-        
-                {% if ai_6 == "tensorflow_ai" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" height="46" alt="tensorflow" /&gt;</p>
+                    {% if ai_1 == "sklearn_ai" %}
+                        <p>&lt;img src="https://skillicons.dev/icons?i=sklearn" height="46" alt="sklearn" /&gt;</p>
+                    {% endif %}
+            
+                    {% if ai_2 == "opencv_ai" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" height="46" alt="opencv" /&gt;</p>
+                    {% endif %}
+            
+                    {% if ai_3 == "pandas_ai" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" height="46" alt="pandas" /&gt;</p>
+                    {% endif %}
+            
+                    {% if ai_4 == "pytorch_ai" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" height="46" alt="pytorch" /&gt;</p>
+                    {% endif %}
+            
+                    {% if ai_5 == "seaborn_ai" %}
+                        <p>&lt;img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" height="46" alt="seaborn" /&gt;</p>
+                    {% endif %}
+            
+                    {% if ai_6 == "tensorflow_ai" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" height="46" alt="tensorflow" /&gt;</p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
         
                 {% comment %} DB LANGUAGE {% endcomment %}
+
+                {% if db_1 or db_2 or db_3 or db_4 or db_5 or db_6 or db_7 or db_8 or db_9 or db_10 or db_11 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;DATABSE: &lt;/h2&gt;
         
-                {% if db_1 == "cockroachdb_db" %}
-                    <p>&lt;img src="https://cdn.worldvectorlogo.com/logos/cockroachdb.svg" height="46" alt="cockroachdb" /&gt;</p>
-                {% endif %}
-        
-                {% if db_2 == "couchdb_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/0d6c64dbbf311879f7d563bfc3ccf559f9ed111c/icons/couchdb/couchdb-original.svg" height="46" alt="couchdb" /&gt;</p>
-                {% endif %}
-        
-                {% if db_3 == "elastic_db" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" height="46" alt="elastic" /&gt;</p>
-                {% endif %}
-        
-                {% if db_4 == "apache_hive_db" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg" height="46" alt="apache_hive" /&gt;</p>
-                {% endif %}
-        
-                {% if db_5 == "mariadb_db" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" height="46" alt="mariadb" /&gt;</p>
-                {% endif %}
-        
-                {% if db_6 == "mongodb_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" height="46" alt="mongodb" /&gt;</p>
-                {% endif %}
-        
-                {% if db_7 == "sql_db" %}
-                    <p>&lt;img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" height="46" alt="sql" /&gt;</p>
-                {% endif %}
-        
-                {% if db_8 == "mysql_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="46" alt="mysql" /&gt;</p>
-                {% endif %}
-        
-                {% if db_9 == "oracle_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" height="46" alt="oracle" /&gt;</p>
-                {% endif %}
-        
-                {% if db_10 == "postgresql_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" height="46" alt="postgresql" /&gt;</p>
-                {% endif %}
-        
-                {% if db_11 == "redis_db" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" height="46" alt="redis" /&gt;</p>
+                    {% if db_1 == "cockroachdb_db" %}
+                        <p>&lt;img src="https://cdn.worldvectorlogo.com/logos/cockroachdb.svg" height="46" alt="cockroachdb" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_2 == "couchdb_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/0d6c64dbbf311879f7d563bfc3ccf559f9ed111c/icons/couchdb/couchdb-original.svg" height="46" alt="couchdb" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_3 == "elastic_db" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" height="46" alt="elastic" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_4 == "apache_hive_db" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg" height="46" alt="apache_hive" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_5 == "mariadb_db" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" height="46" alt="mariadb" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_6 == "mongodb_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" height="46" alt="mongodb" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_7 == "sql_db" %}
+                        <p>&lt;img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" height="46" alt="sql" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_8 == "mysql_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="46" alt="mysql" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_9 == "oracle_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" height="46" alt="oracle" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_10 == "postgresql_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" height="46" alt="postgresql" /&gt;</p>
+                    {% endif %}
+            
+                    {% if db_11 == "redis_db" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" height="46" alt="redis" /&gt;</p>
+                    {% endif %}
+
+                    &lt;&#47;div&gt;
+
                 {% endif %}
         
                 {% comment %} DV LANGUAGE {% endcomment %}
+
+                {% if dv_1 or dv_2 or dv_3 or dv_4 or dv_5 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;DATA VISUALISATION: &lt;/h2&gt;
         
-                {% if dv_1 == "canvasjs_dv" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" height="46" alt="canvasjs" /&gt;</p>
-                {% endif %}
-        
-                {% if dv_2 == "chartjs_dv" %}
-                    <p>&lt;img src="https://www.chartjs.org/media/logo-title.svg" height="46" alt="chartjs" /&gt;</p>
-                {% endif %}
-        
-                {% if dv_3 == "d3js_dv" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" height="46" alt="d3js" /&gt;</p>
-                {% endif %}
-        
-                {% if dv_4 == "grafana_dv" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" height="46" alt="grafana" /&gt;</p>
-                {% endif %}
-        
-                {% if dv_5 == "elasticco_kibana_dv" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" height="46" alt="elasticco_kibana" /&gt;</p>
-                {% endif %}
-        
-                {% comment %} DEVOPS LANGUAGE {% endcomment %}
-        
-                {% if do_1 == "amazonwebservices_do" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="46" alt="amazonwebservices" /&gt;</p>
-                {% endif %}
-        
-                {% if do_2 == "microsoft_azure_do" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" height="46" alt="microsoft_azure" /&gt;</p>
-                {% endif %}
-        
-                {% if do_3 == "gnu_bash_do" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" height="46" alt="gnu_bash" /&gt;</p>
-                {% endif %}
-        
-                {% if do_4 == "docker_do" %}
-                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" height="46" alt="docker" /&gt;</p>
-                {% endif %}
-        
-                {% if do_5 == "google_cloud_do" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" height="46" alt="google_cloud" /&gt;</p>
-                {% endif %}
-        
-                {% if do_6 == "jenkins_do" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" height="46" alt="jenkins" /&gt;</p>
-                {% endif %}
-        
-                {% if do_7 == "kubernetes_do" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" height="46" alt="kubernetes" /&gt;</p>
+                    {% if dv_1 == "canvasjs_dv" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" height="46" alt="canvasjs" /&gt;</p>
+                    {% endif %}
+            
+                    {% if dv_2 == "chartjs_dv" %}
+                        <p>&lt;img src="https://www.chartjs.org/media/logo-title.svg" height="46" alt="chartjs" /&gt;</p>
+                    {% endif %}
+            
+                    {% if dv_3 == "d3js_dv" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" height="46" alt="d3js" /&gt;</p>
+                    {% endif %}
+            
+                    {% if dv_4 == "grafana_dv" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" height="46" alt="grafana" /&gt;</p>
+                    {% endif %}
+            
+                    {% if dv_5 == "elasticco_kibana_dv" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" height="46" alt="elasticco_kibana" /&gt;</p>
+                    {% endif %}
+
+                &lt;&#47;div&gt;
+
                 {% endif %}
         
                 {% comment %} DEVOPS LANGUAGE {% endcomment %}
+
+                {% if do_1 or do_2 or do_3 or do_4 or do_5 or do_6 or do_7 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;DEV OPS: &lt;/h2&gt;
         
-                {% if bas_1 == "appwriteio_bas" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" height="46" alt="appwriteio" /&gt;</p>
+                    {% if do_1 == "amazonwebservices_do" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="46" alt="amazonwebservices" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_2 == "microsoft_azure_do" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" height="46" alt="microsoft_azure" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_3 == "gnu_bash_do" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" height="46" alt="gnu_bash" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_4 == "docker_do" %}
+                        <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" height="46" alt="docker" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_5 == "google_cloud_do" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" height="46" alt="google_cloud" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_6 == "jenkins_do" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" height="46" alt="jenkins" /&gt;</p>
+                    {% endif %}
+            
+                    {% if do_7 == "kubernetes_do" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" height="46" alt="kubernetes" /&gt;</p>
+                    {% endif %}
+
+                &lt;&#47;div&gt;
+
                 {% endif %}
         
-                {% if bas_2 == "firebase_bas" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="46" alt="firebase" /&gt;</p>
-                {% endif %}
+                {% comment %} DEVOPS LANGUAGE {% endcomment %}
+
+                {% if bas_1 or bas_2 or bas_3 or bas_4 %}
+
+                &lt;div align="left"&gt;
+
+                &lt;h2&gt;BACKEND AS A SERVICE: &lt;/h2&gt;
         
-                {% if bas_3 == "heroku_bas" %}
-                    <p>&lt;img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" height="46" alt="heroku" /&gt;</p>
-                {% endif %}
-        
-                {% if bas_4 == "amplify_bas" %}
-                    <p>&lt;img src="https://docs.amplify.aws/assets/logo-dark.svg" height="46" alt="amplify" /&gt;</p>
+                    {% if bas_1 == "appwriteio_bas" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" height="46" alt="appwriteio" /&gt;</p>
+                    {% endif %}
+            
+                    {% if bas_2 == "firebase_bas" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="46" alt="firebase" /&gt;</p>
+                    {% endif %}
+            
+                    {% if bas_3 == "heroku_bas" %}
+                        <p>&lt;img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" height="46" alt="heroku" /&gt;</p>
+                    {% endif %}
+            
+                    {% if bas_4 == "amplify_bas" %}
+                        <p>&lt;img src="https://docs.amplify.aws/assets/logo-dark.svg" height="46" alt="amplify" /&gt;</p>
+                    {% endif %}
+
+                &lt;&#47;div&gt;
+
                 {% endif %}
 
                 {% comment %} SOCIAL LINKS {% endcomment %}
 
-                {% if github %}
-                    <p>&lt;h3&gt; CONNECT WITH ME: &lt;/h3&gt;</p>
+                {% if github or devto or codepen or linkedin or facebook or twitter or kaggle or stackoverflow or gfg or medium or instagram or youtube or codechef or leetcode or codeforces or hackerearth or hackerrank or discord or codesandbox or dribble or behance or hashnode or topcoder %}
 
-                    <p align="left"> &lt;img src="https://komarev.com/ghpvc/?username={{github}}&label=Profile%20views&color=0e75b6&style=flat" alt="{{github}}" /&gt;</p>
-                {% endif %}
+                &lt;div align="left"&gt;
 
-                {% if devto %}
-                    <p>&lt;a href="https://dev.to/{{devto}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                &lt;h2&gt;SOCIAL LINKS: &lt;/h2&gt;
 
-                {% if codepen %}
-                    <p> &lt;a href="https://codepen.io/{{codepen}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
 
-                {% if linkedin %}
-                    <p>&lt;a href="https://linkedin.com/in/{{linkedin}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if devto %}
 
-                {% if facebook %}
-                    <p>&lt;a href="https://fb.com/{{facebook}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://dev.to/{{devto}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if twitter %}
-                    <p>&lt;a href="https://twitter.com/{{twitter}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if kaggle %}
-                    <p>&lt;a href="https://kaggle.com/{{kaggle}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if codepen %}
 
-                {% if stackoverflow %}
-                    <p>&lt;a href="https://stackoverflow.com/users/{{stackoverflow}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://codepen.io/{{codepen}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if gfg %}
-                    <p>&lt;a href="https://auth.geeksforgeeks.org/user/s" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if medium %}
-                    <p>&lt;a href="https://medium.com/{{medium}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if linkedin %}
 
-                {% if instagram %}
-                    <p>&lt;a href="https://instagram.com/{{instagram}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://linkedin.com/in/{{linkedin}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if youtube %}
-                    <p>&lt;a href="https://www.youtube.com/c/{{youtube}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if codechef %}
-                    <p>&lt;a href="https://www.codechef.com/users/{{codechef}}" target="blank"&gt;&lt;img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if facebook %}
 
-                {% if leetcode %}
-                    <p>&lt;a href="https://www.leetcode.com/{{leetcode}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://fb.com/{{facebook}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if codeforces %}
-                    <p>&lt;a href="https://codeforces.com/profile/{{codeforces}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if hackerearth %}
-                    <p>&lt;a href="https://www.hackerearth.com/{{hackerearth}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if twitter %}
 
-                {% if hackerrank %}
-                    <p>&lt;a href="https://www.hackerrank.com/{{hackerrank}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://twitter.com/{{twitter}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if discord %}
-                    <p>&lt;a href="https://discord.gg/{{discord}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="S" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if codesandbox %}
-                    <p>&lt;a href="https://codesandbox.com/{{codesandbox}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codesandbox.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if kaggle %}
 
-                {% if dribble %}
-                    <p>&lt;a href="https://dribbble.com/{{dribble}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                        &lt;a href="https://kaggle.com/{{kaggle}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
 
-                {% if behance %}
-                    <p>&lt;a href="https://www.behance.net/{{behance}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/behance.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% endif %}
 
-                {% if hashnode %}
-                    <p>&lt;a href="https://hashnode.com/{{hashnode}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
-                {% endif %}
+                    {% if stackoverflow %}
 
-                {% if topcoder %}
-                    <p>&lt;a href="https://www.topcoder.com/members/{{topcoder}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/topcoder.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;</p>
+                        &lt;a href="https://stackoverflow.com/users/{{stackoverflow}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+                        
+                    {% endif %}
+
+                    {% if gfg %}
+                    
+                        &lt;a href="https://auth.geeksforgeeks.org/user/s" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if medium %}
+
+                        &lt;a href="https://medium.com/{{medium}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if instagram %}
+
+                        &lt;a href="https://instagram.com/{{instagram}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if youtube %}
+
+                        &lt;a href="https://www.youtube.com/c/{{youtube}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if codechef %}
+
+                        &lt;a href="https://www.codechef.com/users/{{codechef}}" target="blank"&gt;&lt;img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if leetcode %}
+
+                        &lt;a href="https://www.leetcode.com/{{leetcode}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if codeforces %}
+
+                        &lt;a href="https://codeforces.com/profile/{{codeforces}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if hackerearth %}
+
+                        &lt;a href="https://www.hackerearth.com/{{hackerearth}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if hackerrank %}
+
+                        &lt;a href="https://www.hackerrank.com/{{hackerrank}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if discord %}
+
+                        &lt;a href="https://discord.gg/{{discord}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="S" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if codesandbox %}
+
+                        &lt;a href="https://codesandbox.com/{{codesandbox}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codesandbox.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if dribble %}
+
+                        &lt;a href="https://dribbble.com/{{dribble}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if behance %}
+
+                        &lt;a href="https://www.behance.net/{{behance}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/behance.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if hashnode %}
+
+                        &lt;a href="https://hashnode.com/{{hashnode}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                    {% if topcoder %}
+
+                        &lt;a href="https://www.topcoder.com/members/{{topcoder}}" target="blank"&gt;&lt;img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/topcoder.svg" alt="s" height="30" width="40" /&gt;&lt;/a&gt;
+
+                    {% endif %}
+
+                &lt;&#47;div&gt;
+
                 {% endif %}
 
                 {% comment %} GITHUB SPECIALS {% endcomment %}
@@ -998,21 +1152,15 @@
                 &lt;div align="center"&gt;
                     &lt;table&gt;
                         &lt;tr&gt;
-                    {% if special_1 == "visitor_count_badge" %}
+                    {% comment %} {% if special_1 == "visitor_count_badge" %}
                         <p>&lt;p align="left"&gt;
                             &lt;img src="https://komarev.com/ghpvc/?username={{github}}&amp;label=Profile%20views&amp;color=0e75b6&amp;style=flat" alt="{{github}}" /&gt;
                         &lt;/p&gt;</p>
-                    {% endif %}
-
-                    {% if special_2 == "github_trophy" %}
-                        <p>&lt;p align="center"&gt;
-                            &lt;a href="https://github.com/ryo-ma/github-profile-trophy"&gt;&lt;img src="https://github-profile-trophy.vercel.app/?username={{github}}" alt="{{github}}" /&gt;&lt;/a&gt;
-                        &lt;/p&gt;</p>
-                    {% endif %}
+                    {% endif %} {% endcomment %}
 
                     {% if special_3 == "profile_stats_card" %}
                         <p>&lt;p align="center"&gt;
-                            &lt;img align="center" src="https://github-readme-stats.vercel.app/api?username={{github}}&amp;show_icons=true&amp;locale=en" alt="{{github}}" /&gt;
+                            &lt;img align="center" width="80%" src="https://github-readme-activity-graph.vercel.app/graph?username={{github}}&theme=tokyo-night&area=true&hide_border=true" alt="{{github}}" /&gt;
                         &lt;/p&gt;</p>
                     {% endif %}
 
@@ -1024,8 +1172,19 @@
 
                     {% if special_5 == "github_streak_stats" %}
                         <p>&lt;p align="center"&gt;
-                            &lt;img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user={{github}}&amp;" alt="{{github}}" /&gt;
+                            &lt;img align="center" src="https://github-readme-stats.vercel.app/api?username={{github}}&amp;show_icons=true&amp;locale=en" alt="{{github}}" /&gt;
                         &lt;/p&gt;</p>
+                    {% endif %}
+
+                    {% if special_2 == "github_trophy" %}
+
+                    &lt;p align="left"&gt;&lt;details&gt; 
+                        &lt;summary&gt; GitHub Trophies :trophy: &lt;/summary&gt; 
+                        &lt;p align="center"&gt;
+                          &lt;br&gt; &lt;br&gt; 
+                          &lt;img width=500 src="https://github-profile-trophy.vercel.app/?username={{github}}&theme=monokai&column=3&margin-w=15&margin-h=15"/ &gt;
+                      &lt;/details&gt;&lt;/p&gt; 
+
                     {% endif %}
 
                     &lt;/tr&gt;
