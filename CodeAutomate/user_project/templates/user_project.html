@@ -132,17 +132,68 @@
 
         <div class="rapper">
             <h2 class="title">Create MarkDown</h2>
-            <h2>Enter Steps</h2>
 
             <form method="POST">
                 {% csrf_token %}
+                <input name="userName" class="item" type="text" placeholder="Hii there, I'm ">
+                <input name="github_UserId" class="item" type="text" placeholder="GitHub URL ">
                 <input name="project_title" class="item" type="text" placeholder="Title of Your Project ">
-                
+                <input name="project_description" class="item" type="text" placeholder="Description of Your Project ">
+                <input name="app_icon_url" class="item" type="text" placeholder="Brand Logo or App Icon URL">
+                <input name="screenshots_url" class="item" type="text" placeholder="Screenshots URL">
+                <input name="paypal_id" class="item" type="text" placeholder="PayPal User ID ">
+                <input name="buy_me_coffee" class="item" type="text" placeholder="Buy Me A Coffe User ID ">
+
+                {% comment %} <h3 class="title">Features</h3>
+
                 <div id="inputContainer">
-                    <input type="text" name="steps" placeholder="Step 1">
+                    <input type="text" name="steps" placeholder="1">
+                </div>
+                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
+
+                  <h3 class="title">Features</h3>
+                  <div id="featureContainer">
+                      <input type="text" name="feature_steps[]" placeholder="Feature Step 1">
+                  </div>
+                  <button type="button" onclick="addStep('featureContainer', 'feature_steps[]', 'Feature')">Add Feature Step</button>
+
+                  
+
+
+                <h3 class="title">Installation</h3>
+                {% comment %} <div id="inputContainer">
+                  <input type="text" name="steps" placeholder="1">
+                </div>
+                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
+                <div id="installationContainer">
+                  <input type="text" name="installation_steps[]" placeholder="Installation Step 1">
+              </div>
+              <button type="button" onclick="addStep('installationContainer', 'installation_steps[]', 'Installation')">Add Installation Step</button>
+
+                {% comment %} <h3 class="title">Usage</h3>
+                <div id="inputContainer">
+                  <input type="text" name="steps" placeholder="1">
                 </div>
 
-                <button type="button" onclick="addStep()">Add More Steps</button>
+                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
+                <!-- Usage Section -->
+                <h3 class="title">Usage</h3>
+                <div id="usageContainer">
+                    <input type="text" name="usage_steps[]" placeholder="Usage Step 1">
+                </div>
+                <button type="button" onclick="addStep('usageContainer', 'usage_steps[]', 'Usage')">Add Usage Step</button>
+
+                <!-- Contributions Section -->
+                <h3 class="title">Contributions</h3>
+                <div id="contributionContainer">
+                    <input type="text" name="contribution_steps[]" placeholder="Contribution Step 1">
+                </div>
+                <button type="button" onclick="addStep('contributionContainer', 'contribution_steps[]', 'Contribution')">Add Contribution Step</button>
+
+                {% comment %} <h3 class="title">Support Me </h3> {% endcomment %}
+
+                {% comment %} <h3 class="title">Built With</h3> {% endcomment %}
+
                 <input type="submit" value="Submit">
             </form>
         </div>
@@ -151,35 +202,110 @@
     <div class="output-ka-dada">
       <div class="output-ka-baap">
           <div class="output">
-            {% if project_title %}
-                <h3>Project Title:</h3>
-                <p>{{ project_title }}</p>
+
+            {% if project_title or project_description or app_icon_url%}
+              <p>&lt;div align="center"&gt;</p>
+                <p>&lt;img src="{{app_icon_url}}" width="145" height="145" style="display: block; margin: 0 auto"/&gt;</p>
+                <p>&lt;h1&gt;{{ project_title }}&lt;/h1&gt;</p>
+                <p>&lt;h3&gt;{{ project_description }}&lt;/h3&gt;</p>
+              <p>&lt;/div&gt;</p>  
             {% endif %}
 
-            {% if steps %}
-                <h3>Submitted Steps:</h3>
-                <ul>
-                    {% for step in steps %}
-                        <li>{{ step }}</li>
-                    {% endfor %}
-                </ul>
+            {% if feature_steps or installation_steps or usage_steps or contribution_steps %}
+              <p>## Table of Contents</p>
+
+              <p>- [Features](#features)</p>
+              <p>- [Screenshots](#screenshots)</p>
+              <p>- [Installation](#installation)</p>
+              <p>- [Usage](#usage)</p>
+              <p>- [Contributions](#contributions)</p>
+              <p>- [Developer](#developer)</p>
             {% endif %}
+
+            {% if feature_steps %}
+            <p>## Features</p>
+            
+                {% for step in feature_steps  %}
+                  <p>- {{step}}</p>
+                {% endfor %}
+            {% endif %}
+
+            {% if screenshots_url %}
+            <p>## Screenshots</p>
+
+            <p>&lt;div align="center"&gt;</p>
+              <p>&lt;img height="600px" src="{{screenshots_url}}" /&gt;</p>
+            <p>&lt;/div&gt;</p> 
+            {% endif %}
+
+            {% if installation_steps %}
+            <p>## Installation</p>
+
+                {% for step in installation_steps %}
+                  <p>- {{step}}</p>
+                {% endfor %}
+            {% endif %}
+
+            {% if usage_steps  %}
+            <p>## Usage</p>
+
+                {% for step in usage_steps  %}
+                  <p>- {{step}}</p>
+                {% endfor %}
+            {% endif %}
+
+            {% if contribution_steps  %}
+            <p>## Contributions</p>
+
+                {% for step in contribution_steps  %}
+                  <p>- {{step}}</p>
+                {% endfor %}
+            {% endif %}
+
+            {% if paypal_id or buy_me_coffee  %}
+
+              <p># Support Me</p>
+
+              <p>&lt;h3&gt;If you like my work you can support me via : &lt;/h3&gt;</p>
+
+              <p>&lt;a href="https://paypal.me/{{paypal_id}}" target="_blank"&gt; &lt;kbd&gt; &lt;img
+              src="https://github.com/AzeemIdrisi/AzeemIdrisi/blob/main/docs/paypal-button-blue.png" alt="PayPal"
+              width="147"&gt;&lt;/a&gt; &lt;a href="https://www.buymeacoffee.com/{{buy_me_coffee}}" target="_blank"&gt; &lt;kbd&gt; &lt;img src="https://github.com/AzeemIdrisi/AzeemIdrisi/blob/main/docs/default-yellow.png" alt="Buy Me A Coffee" width="200"&gt;&lt;/a&gt;</p>
+            
+            {% endif %}
+
+            {% if github_UserId or project_title or userName  %}
+
+            <p># Developer</p>
+
+            <p>&lt;div align="center"&gt;</p>
+              
+              <p>&lt;img src="https://github-production-user-asset-6210df.s3.amazonaws.com/112647789/257426269-a5fa646c-93a2-460f-bcb7-528fedb147e9.PNG?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250202T095703Z&X-Amz-Expires=300&X-Amz-Signature=66b7ec94bd1d51b9dbb1b6700ca5876302ac4d583f5c5585ffb3359ac104dbae&X-Amz-SignedHeaders=host" width="150px" style="border-radius: 30%; display: block; margin: 0 auto"/&gt;</p>
+
+              <p>&lt;h3&gt;&lt;a href="https://github.com/{{github_UserId}}"&gt;{{github_UserId}}&lt;/a&gt;&lt;/h3&gt;</p>
+                  <p>&lt;br/&gt;</p>
+                  <p>&lt;p&gt;Thank you for using &lt;strong&gt;{{project_title}}&lt;/strong&gt;/p&gt;</p>
+            <p>&lt;/div&gt;</p>
+
+            <p>&lt;div align="center"&gt;</p>
+              <p>&lt;h4&gt;{{project_title}} &copy {{userName}} 2025&lt;/h4&gt;</p>
+            <p>&lt;/div&gt;</p>
+
+          {% endif %}
           </div>
       </div>
     </div>
 
     <script>
-        let stepCount = 1;
-
-        function addStep() {
-            stepCount++;
-            const container = document.getElementById("inputContainer");
-            const newInput = document.createElement("input");
-            newInput.type = "text";
-            newInput.name = "steps";
-            newInput.placeholder = "Step " + stepCount;
-            container.appendChild(newInput);
-        }
+      function addStep(containerId, inputName, placeholderPrefix) {
+        const container = document.getElementById(containerId);
+        const stepCount = container.childElementCount + 1;
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = inputName;
+        newInput.placeholder = placeholderPrefix + " Step " + stepCount;
+        container.appendChild(newInput);
+    }
     </script>
 </body>
 </html>
