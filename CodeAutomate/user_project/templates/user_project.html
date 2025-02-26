@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Automate</title>
     <style>
+      #featureContainer,#installationContainer,#usageContainer,#contributionContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 70%;
+      }
+      .btnx{
+        
+        width: 80px;
+        margin:10px auto 10px auto;
+      }
+      .btny{
+        width: 30%;
+      }
       body {
           background-color: rgb(233, 240, 238);
           font-family: monospace;
@@ -135,14 +149,260 @@
 
             <form method="POST">
                 {% csrf_token %}
-                <input name="userName" class="item" type="text" placeholder="Hii there, I'm ">
-                <input name="github_UserId" class="item" type="text" placeholder="GitHub URL ">
-                <input name="project_title" class="item" type="text" placeholder="Title of Your Project ">
-                <input name="project_description" class="item" type="text" placeholder="Description of Your Project ">
-                <input name="app_icon_url" class="item" type="text" placeholder="Brand Logo or App Icon URL">
-                <input name="screenshots_url" class="item" type="text" placeholder="Screenshots URL">
-                <input name="paypal_id" class="item" type="text" placeholder="PayPal User ID ">
-                <input name="buy_me_coffee" class="item" type="text" placeholder="Buy Me A Coffe User ID ">
+                <input name="userName" class="item" type="text" placeholder="Hii there 👋, I'm ">
+                <input name="github_UserId" class="item" type="text" placeholder="GitHub URL 🔗">
+                <input name="project_title" class="item" type="text" placeholder="Title of Your Project 🌱">
+                <input name="project_description" class="item" type="text" placeholder="Description of Your Project 🌵">
+                <input name="app_icon_url" class="item" type="text" placeholder="Brand Logo or App Icon URL 🧩">
+                <input name="screenshots_url" class="item" type="text" placeholder="Screenshots URL 📱">
+                <input name="paypal_id" class="item" type="text" placeholder="PayPal User ID 🏧">
+                <input name="buy_me_coffee" class="item" type="text" placeholder="Buy Me A Coffe User ID 🍵">
+
+                <div class="icons">
+                  <h3 class="title">Build With</h3>
+
+                  <h3>Programming Languages</h3>
+
+                  <br/>
+                  <input type="checkbox" id="c_lang" name="lang_1" value="c_lang">
+                  <label for="c_lang"><img src="https://skillicons.dev/icons?i=c" height="46" alt="C Language logo"></label>
+
+                  <input type="checkbox" id="cpp_lang" name="lang_2" value="cpp_lang">
+                  <label for="cpp_lang"><img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ Language logo"></label>
+
+                  <input type="checkbox" id="csharp_lang" name="lang_3" value="csharp_lang">
+                  <label for="csharp_lang"><img src="https://skillicons.dev/icons?i=cs" height="46" alt="C# Language logo"></label>
+
+                  <input type="checkbox" id="go_lang" name="lang_4" value="go_lang">
+                  <label for="go_lang"><img src="https://skillicons.dev/icons?i=go" height="46" alt="Go Language logo"></label>
+                  
+                  <input type="checkbox" id="java_lang" name="lang_5" value="java_lang">
+                  <label for="java_lang"><img src="https://skillicons.dev/icons?i=java" height="46" alt="Java Language logo"></label>
+                  
+                  <input type="checkbox" id="js_lang" name="lang_6" value="js_lang">
+                  <label for="js_lang"><img src="https://skillicons.dev/icons?i=js" height="46" alt="JS Language logo"></label>
+
+                  <input type="checkbox" id="ts_lang" name="lang_7" value="ts_lang">
+                  <label for="ts_lang"><img src="https://skillicons.dev/icons?i=ts" height="46" alt="TS Language logo"></label>
+
+                  <input type="checkbox" id="ruby_lang" name="lang_8" value="ruby_lang">
+                  <label for="ruby_lang"><img src="https://skillicons.dev/icons?i=ruby" height="46" alt="RUBY Language logo"></label>
+
+                  <input type="checkbox" id="scala_lang" name="lang_9" value="scala_lang">
+                  <label for="scala_lang"><img src="https://skillicons.dev/icons?i=scala" height="46" alt="Scala Language logo"></label>
+
+                  <input type="checkbox" id="python_lang" name="lang_10" value="python_lang">
+                  <label for="python_lang"><img src="https://skillicons.dev/icons?i=python" height="46" alt="Python Language logo"></label>
+
+                  <input type="checkbox" id="clojure_lang" name="lang_11" value="clojure_lang">
+                  <label for="clojure_lang"><img src="https://skillicons.dev/icons?i=clojure" height="46" alt="Clojure Language logo"></label>
+
+                  <input type="checkbox" id="swift_lang" name="lang_12" value="swift_lang">
+                  <label for="swift_lang"><img src="https://skillicons.dev/icons?i=swift" height="46" alt="Swift Language logo"></label>
+
+                  <input type="checkbox" id="rust_lang" name="lang_13" value="rust_lang">
+                  <label for="rust_lang"><img src="https://skillicons.dev/icons?i=rust" height="46" alt="Rust Language logo"></label>
+
+                  <input type="checkbox" id="r_lang" name="lang_14" value="r_lang">
+                  <label for="r_lang"><img src="https://skillicons.dev/icons?i=r" height="46" alt="R Language logo"></label>
+
+                  <input type="checkbox" id="kotlin_lang" name="lang_15" value="kotlin_lang">
+                  <label for="kotlin_lang"><img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="Kotlin Language logo"></label>
+
+                  <input type="checkbox" id="perl_lang" name="lang_16" value="perl_lang">
+                  <label for="perl_lang"><img src="https://skillicons.dev/icons?i=perl" height="46" alt="Perl Language logo"></label>
+
+                  <h3>Frontend Development</h3>
+                  <br/>
+
+                  <input type="checkbox" id="angular_fe" name="fe_1" value="angular_fe">
+                  <label for="angular_fe"><img src="https://skillicons.dev/icons?i=angular" height="46" alt="Angular"></label>
+
+                  <input type="checkbox" id="bable_fe" name="fe_2" value="bable_fe">
+                  <label for="bable_fe"><img src="https://skillicons.dev/icons?i=babel" height="46" alt="Babel"></label>
+
+                  <input type="checkbox" id="bootstrap_fe" name="fe_3" value="bootstrap_fe">
+                  <label for="bootstrap_fe"><img src="https://skillicons.dev/icons?i=bootstrap" height="46" alt="Bootstrap"></label>
+
+                  <input type="checkbox" id="css_fe" name="fe_4" value="css_fe">
+                  <label for="css_fe"><img src="https://skillicons.dev/icons?i=css" height="46" alt="CSS"></label>
+
+                  <input type="checkbox" id="windicss_fe" name="fe_5" value="windicss_fe">
+                  <label for="windicss_fe"><img src="https://skillicons.dev/icons?i=windicss" height="46" alt="WIND CSS"></label>
+
+                  <input type="checkbox" id="figma_fe" name="fe_6" value="figma_fe">
+                  <label for="figma_fe"><img src="https://skillicons.dev/icons?i=figma" height="46" alt="Figma"></label>
+
+                  <input type="checkbox" id="gtk_fe" name="fe_7" value="gtk_fe">
+                  <label for="gtk_fe"><img src="https://skillicons.dev/icons?i=gtk" height="46" alt="GTK"></label>
+
+                  <input type="checkbox" id="html_fe" name="fe_8" value="html_fe">
+                  <label for="html_fe"><img src="https://skillicons.dev/icons?i=html" height="46" alt="HTML"></label>
+
+                  <input type="checkbox" id="qt_fe" name="fe_9" value="qt_fe">
+                  <label for="qt_fe"><img src="https://skillicons.dev/icons?i=qt" height="46" alt="QT"></label>
+
+                  <input type="checkbox" id="react_fe" name="fe_10" value="react_fe">
+                  <label for="react_fe"><img src="https://skillicons.dev/icons?i=react" height="46" alt="REACT"></label>
+
+                  <input type="checkbox" id="sass_fe" name="fe_11" value="sass_fe">
+                  <label for="sass_fe"><img src="https://skillicons.dev/icons?i=sass" height="46" alt="SASS"></label>
+
+                  <input type="checkbox" id="tailwind_fe" name="fe_12" value="tailwind_fe">
+                  <label for="tailwind_fe"><img src="https://skillicons.dev/icons?i=tailwind" height="46" alt="TailWind"></label>
+
+                  <input type="checkbox" id="vue_fe" name="fe_13" value="vue_fe">
+                  <label for="vue_fe"><img src="https://skillicons.dev/icons?i=vue" height="46" alt="VUE"></label>
+
+                  <input type="checkbox" id="vuetify_fe" name="fe_14" value="vuetify_fe">
+                  <label for="vuetify_fe"><img src="https://skillicons.dev/icons?i=vuetify" height="46" alt="VUETIFY"></label>
+
+
+                  <h3>Backend Development</h3>
+                  <br/>
+
+                  <input type="checkbox" id="express_be" name="be_1" value="express_be">
+                  <label for="express_be"><img src="https://skillicons.dev/icons?i=express" height="46" alt="express"></label>
+
+                  <input type="checkbox" id="graphql_be" name="be_2" value="graphql_be">
+                  <label for="graphql_be"><img src="https://skillicons.dev/icons?i=graphql" height="46" alt="graphql"></label>
+
+                  <input type="checkbox" id="nodejs_be" name="be_3" value="nodejs_be">
+                  <label for="nodejs_be"><img src="https://skillicons.dev/icons?i=nodejs" height="46" alt="nodejs"></label>
+
+                  <input type="checkbox" id="spring_be" name="be_4" value="spring_be">
+                  <label for="spring_be"><img src="https://skillicons.dev/icons?i=spring" height="46" alt="spring"></label>
+
+                  <h3>Mobile App Development</h3>
+                  <br/>
+
+                  <input type="checkbox" id="androidstudio_mobile" name="mobile_1" value="androidstudio_mobile">
+                  <label for="androidstudio_mobile"><img src="https://skillicons.dev/icons?i=androidstudio" height="46" alt="androidstudio"></label>
+
+                  <input type="checkbox" id="dart_mobile" name="mobile_2" value="dart_mobile">
+                  <label for="dart_mobile"><img src="https://skillicons.dev/icons?i=dart" height="46" alt="dart"></label>
+
+                  <input type="checkbox" id="flutter_mobile" name="mobile_3" value="flutter_mobile">
+                  <label for="flutter_mobile"><img src="https://skillicons.dev/icons?i=flutter" height="46" alt="flutter"></label>
+
+                  <input type="checkbox" id="kotlin_mobile" name="mobile_4" value="kotlin_mobile">
+                  <label for="kotlin_mobile"><img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="kotlin"></label>
+
+                  <h3>Artificial Intelligence - Machine Learning</h3>
+                  <br/>
+
+                  <input type="checkbox" id="sklearn_ai" name="ai_1" value="sklearn_ai">
+                  <label for="sklearn_ai"><img src="https://skillicons.dev/icons?i=sklearn" height="46" alt="sklearn"></label>
+
+                  <input type="checkbox" id="opencv_ai" name="ai_2" value="opencv_ai">
+                  <label for="opencv_ai"><img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" height="46" alt="opencv"></label>
+
+                  <input type="checkbox" id="pandas_ai" name="ai_3" value="pandas_ai">
+                  <label for="pandas_ai"><img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" height="46" alt="pandas"></label>
+
+                  <input type="checkbox" id="pytorch_ai" name="ai_4" value="pytorch_ai">
+                  <label for="pytorch_ai"><img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" height="46" alt="pytorch"></label>
+
+                  <input type="checkbox" id="seaborn_ai" name="ai_5" value="seaborn_ai">
+                  <label for="seaborn_ai"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" height="46" alt="seaborn"></label>
+
+                  <input type="checkbox" id="tensorflow_ai" name="ai_6" value="tensorflow_ai">
+                  <label for="tensorflow_ai"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" height="46" alt="tensorflow"></label>
+
+                  <h3>Database</h3>
+                  <br/>
+
+                  <input type="checkbox" id="cockroachdb_db" name="db_1" value="cockroachdb_db">
+                  <label for="_db"><img src="https://cdn.worldvectorlogo.com/logos/cockroachdb.svg" height="46" alt="cockroachdb"></label>
+
+                  <input type="checkbox" id="couchdb_db" name="db_2" value="couchdb_db">
+                  <label for="couchdb_db"><img src="https://raw.githubusercontent.com/devicons/devicon/0d6c64dbbf311879f7d563bfc3ccf559f9ed111c/icons/couchdb/couchdb-original.svg" height="46" alt="couchdb"></label>
+
+                  <input type="checkbox" id="elastic_db" name="db_3" value="elastic_db">
+                  <label for="_db"><img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" height="46" alt="elastic"></label>
+
+                  <input type="checkbox" id="apache_hive_db" name="db_4" value="apache_hive_db">
+                  <label for="apache_hive_db"><img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg" height="46" alt="apache_hive"></label>
+
+                  <input type="checkbox" id="mariadb_db" name="db_5" value="mariadb_db">
+                  <label for="_db"><img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" height="46" alt="mariadb"></label>
+
+                  <input type="checkbox" id="mongodb_db" name="db_6" value="mongodb_db">
+                  <label for="mongodb_db"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" height="46" alt="mongodb"></label>
+
+                  <input type="checkbox" id="sql_db" name="db_7" value="sql_db">
+                  <label for="sql_db"><img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" height="46" alt="sql"></label>
+
+                  <input type="checkbox" id="mysql_db" name="db_8" value="mysql_db">
+                  <label for="mysql_db"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="46" alt="mysql"></label>
+
+                  <input type="checkbox" id="oracle_db" name="db_9" value="oracle_db">
+                  <label for="oracle_db"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" height="46" alt="oracle"></label>
+
+                  <input type="checkbox" id="postgresql_db" name="db_10" value="postgresql_db">
+                  <label for="postgresql_db"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" height="46" alt="postgresql"></label>
+
+                  <input type="checkbox" id="redis_db" name="db_11" value="redis_db">
+                  <label for="redis_db"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" height="46" alt="redis"></label>
+
+                  <h3>Data Visualisation</h3>
+                  <br/>
+
+                  <input type="checkbox" id="canvasjs_dv" name="dv_1" value="canvasjs_dv">
+                  <label for="_dv"><img src="https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" height="46" alt="canvasjs"></label>
+
+                  <input type="checkbox" id="chartjs_dv" name="dv_2" value="chartjs_dv">
+                  <label for="_dv"><img src="https://www.chartjs.org/media/logo-title.svg" height="46" alt="chartjs"></label>
+
+                  <input type="checkbox" id="d3js_dv" name="dv_3" value="d3js_dv">
+                  <label for="d3js_dv"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" height="46" alt="d3js"></label>
+
+                  <input type="checkbox" id="grafana_dv" name="dv_4" value="grafana_dv">
+                  <label for="_dv"><img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" height="46" alt="grafana"></label>
+
+                  <input type="checkbox" id="elasticco_kibana_dv" name="dv_5" value="elasticco_kibana_dv">
+                  <label for="elasticco_kibana_dv"><img src="https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" height="46" alt="elasticco_kibana"></label>
+
+                  <h3>DevOps</h3>
+                  <br/>
+
+                  <input type="checkbox" id="amazonwebservices_do" name="do_1" value="amazonwebservices_do">
+                  <label for="amazonwebservices_do"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="46" alt="amazonwebservices"></label>
+
+                  <input type="checkbox" id="microsoft_azure_do" name="do_2" value="microsoft_azure_do">
+                  <label for="microsoft_azure_do"><img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" height="46" alt="microsoft_azure"></label>
+
+                  <input type="checkbox" id="gnu_bash_do" name="do_3" value="gnu_bash_do">
+                  <label for="_do"><img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" height="46" alt="gnu_bash"></label>
+
+                  <input type="checkbox" id="docker_do" name="do_4" value="docker_do">
+                  <label for="docker_do"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" height="46" alt="docker"></label>
+
+                  <input type="checkbox" id="google_cloud_do" name="do_5" value="google_cloud_do">
+                  <label for="google_cloud_do"><img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" height="46" alt="google_cloud"></label>
+
+                  <input type="checkbox" id="jenkins_do" name="do_6" value="jenkins_do">
+                  <label for="jenkins_do"><img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" height="46" alt="jenkins"></label>
+
+                  <input type="checkbox" id="kubernetes_do" name="do_7" value="kubernetes_do">
+                  <label for="kubernetes_do"><img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" height="46" alt="kubernetes"></label>
+
+                  <h3>Backend As Service</h3>
+                  <br/>
+
+                  <input type="checkbox" id="appwriteio_bas" name="bas_1" value="appwriteio_bas">
+                  <label for="appwriteio_bas"><img src="https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" height="46" alt="appwriteio"></label>
+                  
+                  <input type="checkbox" id="firebase_bas" name="bas_2" value="firebase_bas">
+                  <label for="_bas"><img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="46" alt="firebase"></label>
+                  
+                  <input type="checkbox" id="heroku_bas" name="bas_3" value="heroku_bas">
+                  <label for="heroku_bas"><img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" height="46" alt="heroku"></label>
+
+                  <input type="checkbox" id="amplify_bas" name="bas_4" value="amplify_bas">
+                  <label for="amplify_bas"><img src="https://docs.amplify.aws/assets/logo-dark.svg" height="46" alt="amplify"></label>
+                  
+              </div>
 
                 {% comment %} <h3 class="title">Features</h3>
 
@@ -155,7 +415,7 @@
                   <div id="featureContainer">
                       <input type="text" name="feature_steps[]" placeholder="Feature Step 1">
                   </div>
-                  <button type="button" onclick="addStep('featureContainer', 'feature_steps[]', 'Feature')">Add Feature Step</button>
+                  <button type="button" class="btny" onclick="addStep('featureContainer', 'feature_steps[]', 'Feature')">Add Feature Step</button>
 
                   
 
@@ -168,7 +428,7 @@
                 <div id="installationContainer">
                   <input type="text" name="installation_steps[]" placeholder="Installation Step 1">
               </div>
-              <button type="button" onclick="addStep('installationContainer', 'installation_steps[]', 'Installation')">Add Installation Step</button>
+              <button type="button" class="btny" onclick="addStep('installationContainer', 'installation_steps[]', 'Installation')">Add Installation Step</button>
 
                 {% comment %} <h3 class="title">Usage</h3>
                 <div id="inputContainer">
@@ -181,20 +441,20 @@
                 <div id="usageContainer">
                     <input type="text" name="usage_steps[]" placeholder="Usage Step 1">
                 </div>
-                <button type="button" onclick="addStep('usageContainer', 'usage_steps[]', 'Usage')">Add Usage Step</button>
+                <button type="button" class="btny" onclick="addStep('usageContainer', 'usage_steps[]', 'Usage')">Add Usage Step</button>
 
                 <!-- Contributions Section -->
                 <h3 class="title">Contributions</h3>
                 <div id="contributionContainer">
                     <input type="text" name="contribution_steps[]" placeholder="Contribution Step 1">
                 </div>
-                <button type="button" onclick="addStep('contributionContainer', 'contribution_steps[]', 'Contribution')">Add Contribution Step</button>
+                <button type="button" class="btny" onclick="addStep('contributionContainer', 'contribution_steps[]', 'Contribution')">Add Contribution Step</button>
 
                 {% comment %} <h3 class="title">Support Me </h3> {% endcomment %}
 
                 {% comment %} <h3 class="title">Built With</h3> {% endcomment %}
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class="btnx">
             </form>
         </div>
     </div>
@@ -210,6 +470,413 @@
                 <p>&lt;h3&gt;{{ project_description }}&lt;/h3&gt;</p>
               <p>&lt;/div&gt;</p>  
             {% endif %}
+
+            {% comment %} PROGRAMMING LANGUAGE {% endcomment %}
+
+            {% if lang_1 or lang_2 or lang_3 or lang_4 or lang_5 or lang_6 or lang_7 or lang_8 or lang_9 or lang_10 or lang_11 or lang_12 or lang_13 or lang_14 or lang_15 or lang_16 %}
+            &lt;div align="left"&gt;
+
+                &lt;h2&gt;PROGRAMMING LANGUAGE: &lt;/h2&gt;
+                {% if lang_1 == "c_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=c" height="46" alt="C language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_2 == "cpp_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="C++ language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_3 == "csharp_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=cs" height="46" alt="C# language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_4 == "go_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=go" height="46" alt="Go language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_5 == "java_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=java" height="46" alt="Java language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_6 == "js_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=js" height="46" alt="JS language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_7 == "ts_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=ts" height="46" alt="TS language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_8 == "ruby_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=cpp" height="46" alt="Ruby language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_9 == "scala_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=scala" height="46" alt="Scala language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_10 == "python_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=python" height="46" alt="Python language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_11 == "clojure_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=clojure" height="46" alt="Clojure language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_12 == "swift_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=swift" height="46" alt="Swift language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+        
+                {% if lang_13 == "rust_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=rust" height="46" alt="Rust language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_14 == "r_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=r" height="46" alt="R language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_15 == "kotlin_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="Kotlin language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+        
+                {% if lang_16 == "perl_lang" %}
+                <p>&lt;img src="https://skillicons.dev/icons?i=perl" height="46" alt="Perl language logo"  &#47;&gt;</p>
+                <p>&lt;img width="8" &#47;&gt; </p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+            {% comment %} Frontend Frameworks {% endcomment %}
+
+            {% if fe_1 or fe_2 or fe_3 or fe_4 or fe_5 or fe_6 or fe_7 or fe_8 or fe_9 or fe_10 or fe_11 or fe_12 or fe_13 or fe_14 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;FRONTEND: &lt;/h2&gt;
+    
+                {% if fe_1 == "angular_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=angular" height="46" alt="Angular" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_2 == "bable_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=babel" height="46" alt="Babel" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_3 == "bootstrap_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=bootstrap" height="46" alt="Bootstrap" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_4 == "css_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=css" height="46" alt="CSS" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_5 == "windicss_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=windicss" height="46" alt="windicss" /&gt;</p>
+                {% endif %} 
+        
+                {% if fe_6 == "figma_fe" %}
+                    <p>&lt; src="https://skillicons.dev/icons?i=figma" height="46" alt="Figma" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_7 == "gtk_fe" %}
+                    <p>&lt; src="https://skillicons.dev/icons?i=gtk" height="46" alt="GTK" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_8 == "html_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=html" height="46" alt="HTML" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_9 == "qt_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=qt" height="46" alt="QT" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_10 == "react_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=react" height="46" alt="REACT" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_11 == "sass_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=sass" height="46" alt="SASS" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_12 == "tailwind_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=tailwind" height="46" alt="TailWind" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_13 == "vue_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=vue" height="46" alt="VUE" /&gt;</p>
+                {% endif %}
+        
+                {% if fe_14 == "vuetify_fe" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=vuetify" height="46" alt="VUETIFY" /&gt;</p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} BACKEND LANGUAGE {% endcomment %}
+
+            {% if be_1 or be_2 or be_3 or be_4 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;BACKEND: &lt;/h2&gt;
+    
+                {% if be_1 == "express_be" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=express" height="46" alt="express" /&gt;</p>
+                {% endif %}
+        
+                {% if be_2 == "graphql_be" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=graphql" height="46" alt="graphql" /&gt;</p>
+                {% endif %}
+        
+                {% if be_3 == "nodejs_be" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=nodejs" height="46" alt="nodejs" /&gt;</p>
+                {% endif %}
+        
+                {% if be_4 == "spring_be" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=spring" height="46" alt="spring" /&gt;</p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} ANDROID LANGUAGE {% endcomment %}
+
+            {% if mobile_1 or mobile_2 or mobile_3 or mobile_4 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;ANDROID AND IOS: &lt;/h2&gt;
+    
+                {% if mobile_1 == "androidstudio_mobile" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=androidstudio" height="46" alt="androidstudio" /&gt;</p>
+                {% endif %}
+        
+                {% if mobile_2 == "dart_mobile" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=dart" height="46" alt="dart" /&gt;</p>
+                {% endif %}
+        
+                {% if mobile_3 == "flutter_mobile" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=flutter" height="46" alt="flutter" /&gt;</p>
+                {% endif %}
+        
+                {% if mobile_4 == "kotlin_mobile" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=kotlin" height="46" alt="kotlin" /&gt;</p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+            
+            {% comment %} AI-ML LANGUAGE {% endcomment %}
+
+            {% if ai_1 or ai_2 or ai_3 or ai_4 or ai_5 or ai_6 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;ARTIFICIAL INTELLIGENCE: &lt;/h2&gt;
+    
+                {% if ai_1 == "sklearn_ai" %}
+                    <p>&lt;img src="https://skillicons.dev/icons?i=sklearn" height="46" alt="sklearn" /&gt;</p>
+                {% endif %}
+        
+                {% if ai_2 == "opencv_ai" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" height="46" alt="opencv" /&gt;</p>
+                {% endif %}
+        
+                {% if ai_3 == "pandas_ai" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" height="46" alt="pandas" /&gt;</p>
+                {% endif %}
+        
+                {% if ai_4 == "pytorch_ai" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" height="46" alt="pytorch" /&gt;</p>
+                {% endif %}
+        
+                {% if ai_5 == "seaborn_ai" %}
+                    <p>&lt;img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" height="46" alt="seaborn" /&gt;</p>
+                {% endif %}
+        
+                {% if ai_6 == "tensorflow_ai" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" height="46" alt="tensorflow" /&gt;</p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} DB LANGUAGE {% endcomment %}
+
+            {% if db_1 or db_2 or db_3 or db_4 or db_5 or db_6 or db_7 or db_8 or db_9 or db_10 or db_11 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;DATABSE: &lt;/h2&gt;
+    
+                {% if db_1 == "cockroachdb_db" %}
+                    <p>&lt;img src="https://cdn.worldvectorlogo.com/logos/cockroachdb.svg" height="46" alt="cockroachdb" /&gt;</p>
+                {% endif %}
+        
+                {% if db_2 == "couchdb_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/0d6c64dbbf311879f7d563bfc3ccf559f9ed111c/icons/couchdb/couchdb-original.svg" height="46" alt="couchdb" /&gt;</p>
+                {% endif %}
+        
+                {% if db_3 == "elastic_db" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" height="46" alt="elastic" /&gt;</p>
+                {% endif %}
+        
+                {% if db_4 == "apache_hive_db" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg" height="46" alt="apache_hive" /&gt;</p>
+                {% endif %}
+        
+                {% if db_5 == "mariadb_db" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg" height="46" alt="mariadb" /&gt;</p>
+                {% endif %}
+        
+                {% if db_6 == "mongodb_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" height="46" alt="mongodb" /&gt;</p>
+                {% endif %}
+        
+                {% if db_7 == "sql_db" %}
+                    <p>&lt;img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" height="46" alt="sql" /&gt;</p>
+                {% endif %}
+        
+                {% if db_8 == "mysql_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" height="46" alt="mysql" /&gt;</p>
+                {% endif %}
+        
+                {% if db_9 == "oracle_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" height="46" alt="oracle" /&gt;</p>
+                {% endif %}
+        
+                {% if db_10 == "postgresql_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" height="46" alt="postgresql" /&gt;</p>
+                {% endif %}
+        
+                {% if db_11 == "redis_db" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" height="46" alt="redis" /&gt;</p>
+                {% endif %}
+
+                &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} DV LANGUAGE {% endcomment %}
+
+            {% if dv_1 or dv_2 or dv_3 or dv_4 or dv_5 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;DATA VISUALISATION: &lt;/h2&gt;
+    
+                {% if dv_1 == "canvasjs_dv" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg" height="46" alt="canvasjs" /&gt;</p>
+                {% endif %}
+        
+                {% if dv_2 == "chartjs_dv" %}
+                    <p>&lt;img src="https://www.chartjs.org/media/logo-title.svg" height="46" alt="chartjs" /&gt;</p>
+                {% endif %}
+        
+                {% if dv_3 == "d3js_dv" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/d3js/d3js-original.svg" height="46" alt="d3js" /&gt;</p>
+                {% endif %}
+        
+                {% if dv_4 == "grafana_dv" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" height="46" alt="grafana" /&gt;</p>
+                {% endif %}
+        
+                {% if dv_5 == "elasticco_kibana_dv" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" height="46" alt="elasticco_kibana" /&gt;</p>
+                {% endif %}
+
+            &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} DEVOPS LANGUAGE {% endcomment %}
+
+            {% if do_1 or do_2 or do_3 or do_4 or do_5 or do_6 or do_7 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;DEV OPS: &lt;/h2&gt;
+    
+                {% if do_1 == "amazonwebservices_do" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="46" alt="amazonwebservices" /&gt;</p>
+                {% endif %}
+        
+                {% if do_2 == "microsoft_azure_do" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" height="46" alt="microsoft_azure" /&gt;</p>
+                {% endif %}
+        
+                {% if do_3 == "gnu_bash_do" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" height="46" alt="gnu_bash" /&gt;</p>
+                {% endif %}
+        
+                {% if do_4 == "docker_do" %}
+                    <p>&lt;img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" height="46" alt="docker" /&gt;</p>
+                {% endif %}
+        
+                {% if do_5 == "google_cloud_do" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" height="46" alt="google_cloud" /&gt;</p>
+                {% endif %}
+        
+                {% if do_6 == "jenkins_do" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" height="46" alt="jenkins" /&gt;</p>
+                {% endif %}
+        
+                {% if do_7 == "kubernetes_do" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" height="46" alt="kubernetes" /&gt;</p>
+                {% endif %}
+
+            &lt;&#47;div&gt;
+
+            {% endif %}
+    
+            {% comment %} DEVOPS LANGUAGE {% endcomment %}
+
+            {% if bas_1 or bas_2 or bas_3 or bas_4 %}
+
+            &lt;div align="left"&gt;
+
+            &lt;h2&gt;BACKEND AS A SERVICE: &lt;/h2&gt;
+    
+                {% if bas_1 == "appwriteio_bas" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" height="46" alt="appwriteio" /&gt;</p>
+                {% endif %}
+        
+                {% if bas_2 == "firebase_bas" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" height="46" alt="firebase" /&gt;</p>
+                {% endif %}
+        
+                {% if bas_3 == "heroku_bas" %}
+                    <p>&lt;img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" height="46" alt="heroku" /&gt;</p>
+                {% endif %}
+        
+                {% if bas_4 == "amplify_bas" %}
+                    <p>&lt;img src="https://docs.amplify.aws/assets/logo-dark.svg" height="46" alt="amplify" /&gt;</p>
+                {% endif %}
+
+            &lt;&#47;div&gt;
+
+            {% endif %}
+
 
             {% if feature_steps or installation_steps or usage_steps or contribution_steps %}
               <p>## Table of Contents</p>
