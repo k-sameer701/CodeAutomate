@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .forms import ChatForm
 from django.conf import settings
 
-def home(request):
+def ai_bot(request):
     form = ChatForm()
     output = None
 
@@ -20,4 +20,4 @@ def home(request):
             
             output = response.text  # Extract chat response
 
-    return render(request, "home.html", {"form": form, "output": output})
+    return render(request, "ai_bot.html", {"form": form, "output": output})
