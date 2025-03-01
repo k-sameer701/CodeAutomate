@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bot</title>
+
+    <style>
+        {% comment %} body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }  {% endcomment %}
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+         form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            {% comment %} border-radius: 8px; {% endcomment %}
+            {% comment %} box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); {% endcomment %}
+        } 
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .output-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #featureContainer,#installationContainer,#usageContainer,#contributionContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 70%;
+          }
+          .btnx{
+            
+            width: 80px;
+            margin:10px auto 10px auto;
+          }
+          .btny{
+            width: 30%;
+          }
+          body {
+              background-color: rgb(233, 240, 238);
+              font-family: monospace;
+            }
+            .nav {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              /* background-color: antiquewhite; */
+              height: 50px;
+              width: 78%;
+              padding: 10px;
+              overflow: hidden;
+              gap: 70px;
+              background-color: #ffffff;
+              /* background-color: #282828; */
+              box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
+              border-radius: 20px;
+            }
+            .nav a {
+              text-decoration: none;
+              font-weight: 600;
+              font-size: 20px;
+              /* color: rgb(243, 239, 239); */
+              /* background-color: aqua; */
+              color: black;
+              padding: 10px;
+            }
+            .nav a:hover {
+              font-size: 22px;
+            }
+            .main {
+              height: 100%;
+              width: 100%;
+              background-color: rgb(233, 240, 238);
+              /* background-color: #1A1A1A; */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            }
+            .rapper {
+              margin: 10px;
+              height: 80%;
+              width: 80%;
+              background: #ffffff;
+              /* background-color: #1A1A1A; */
+              box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
+              border-radius: 20px;
+              color: black;
+            }
+            .title {
+              text-align: center;
+              font-size: 40px;
+              padding-top: 10px;
+            }
+      
+            {% comment %} form {
+              display: flex;
+              flex-direction: column;
+              width: 80%;
+              justify-content: center;
+              margin-top: 10%;
+              margin-left: 5%;
+              gap: 40px;
+            } {% endcomment %}
+            .item {
+              width: 100%;
+              padding: 15px 10px;
+              margin: 8px 0;
+              border: none;
+              border-bottom: 2px solid rgba(0, 0, 0, 0.575);
+              font-weight: 600;
+            }
+      
+            .same {
+              display: flex;
+              gap: 15px;
+            }
+      
+            .btn {
+              margin: 25px;
+              padding: 15px 380px;
+              background: rgb(196, 191, 191);
+              border: none;
+              cursor: pointer;
+              font-weight: 600;
+              font-size: large;
+              width: 80%;
+            }
+            {% comment %} .output {
+              padding: 10px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              align-items: start;
+            } {% endcomment %}
+            {% comment %} .output-ka-baap {
+              display: flex;
+              width: 80%;
+              margin: auto;
+            }
+            .output-ka-dada {
+              margin: 10px;
+              height: 80%;
+              width: 80%;
+              background: #ffffff;
+              box-shadow: 0px 0px 10px 0.1px rgb(0, 0, 0);
+              border-radius: 20px;
+              margin: auto;
+            } {% endcomment %}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <a href="{% url 'user_profile' %}">Profile</a>
+            <a href="{% url 'user_project' %}">Project</a>
+            <a href="https://lighthearted-tanuki-a15352.netlify.app/" target="_blank">Code Editor</a>
+            <a href="{% url 'ai_bot' %}">AI Bot</a>
+        </div>
+
+        <div class="rapper">
+            <h1>AI BOT</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        
+            {% if output %}
+                <div class="output-container">
+                    <h2>Generated Output:</h2>
+                    <p>{{ output }}</p>
+                </div>
+            {% endif %}
+        </div>
+        
+
+    </div>
+    
+    
+</body>
+</html>
