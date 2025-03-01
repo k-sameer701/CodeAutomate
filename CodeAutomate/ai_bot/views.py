@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .forms import ChatForm
 from django.conf import settings
 
-def ai_bot(request):
+def home(request):
     form = ChatForm()
     output = None
 
@@ -11,7 +11,7 @@ def ai_bot(request):
         form = ChatForm(request.POST)
         if form.is_valid():
             text = form.cleaned_data["text"]
-            co = cohere.Client("0Rw9TdjnmcHIOP54PHnTk0JcSKC3j8fz7yLbqF3u")  # Replace with your actual API key
+            co = cohere.Client(settings.COHERE_API_KEY)  # Use hidden API key
 
             response = co.chat(
                 model="command-nightly",
@@ -20,4 +20,4 @@ def ai_bot(request):
             
             output = response.text  # Extract chat response
 
-    return render(request, "ai_bot.html", {"form": form, "output": output})
+    return render(request, "home.html", {"form": form, "output": output})
