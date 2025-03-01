@@ -11,7 +11,7 @@ def ai_bot(request):
         form = ChatForm(request.POST)
         if form.is_valid():
             text = form.cleaned_data["text"]
-            co = cohere.Client(settings.COHERE_API_KEY)  # Use hidden API key
+            co = cohere.Client("0Rw9TdjnmcHIOP54PHnTk0JcSKC3j8fz7yLbqF3u")  # Use hidden API key
 
             response = co.chat(
                 model="command-nightly",

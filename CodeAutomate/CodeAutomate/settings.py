@@ -11,13 +11,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-# Load .env file
-load_dotenv()
+# # Load .env file
+# load_dotenv()
 
-# Get API Key from environment variable
-API_KEY = os.getenv("API_KEY")
+# # Get API Key from environment variable
+# API_KEY = os.getenv("API_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
