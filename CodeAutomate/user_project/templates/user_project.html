@@ -6,20 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Automate</title>
     <style>
-      #featureContainer,#installationContainer,#usageContainer,#contributionContainer{
+      /* #featureContainer,#installationContainer,#usageContainer,#contributionContainer{
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 70%;
-      }
-      .btnx{
-        
+      } */
+      
+      /* .btnx{
         width: 80px;
         margin:10px auto 10px auto;
-      }
-      .btny{
+      } */
+       .addstep{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* gap: 10px; */
+       }
+       .special{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+       }
+       .inp{
+            width: 100%;
+            padding: 15px 10px;
+            margin: 8px 0;
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.575);
+            font-weight: 600;
+            
+          }
+    
+       .btny{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 25%;
+
+}
+    .btnx{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 20%;
+        margin-left: 43%;
+        margin-bottom: 3%;
+
+    }
+
+
+      /* .btny{
         width: 30%;
-      }
+      } */
       body {
           background-color: rgb(233, 240, 238);
           font-family: monospace;
@@ -41,7 +88,7 @@
         }
         .nav a {
           text-decoration: none;
-          font-weight: 600;
+          font-weight: 400;
           font-size: 20px;
           /* color: rgb(243, 239, 239); */
           /* background-color: aqua; */
@@ -49,7 +96,7 @@
           padding: 10px;
         }
         .nav a:hover {
-          font-size: 22px;
+          font-weight: 600;
         }
         .main {
           height: 100%;
@@ -404,56 +451,52 @@
                   
               </div>
 
-                {% comment %} <h3 class="title">Features</h3>
+            <div class="addstep">
+                    
 
-                <div id="inputContainer">
-                    <input type="text" name="steps" placeholder="1">
-                </div>
-                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
+                  <!--  Features -->
 
-                  <h3 class="title">Features</h3>
-                  <div id="featureContainer">
-                      <input type="text" name="feature_steps[]" placeholder="Feature Step 1">
+                  <div class="features special">
+                            <h3 class="title">Features</h3>
+                        <div id="featureContainer">
+                            <input type="text" name="feature_steps[]" placeholder="Feature 1" class="inp">
+                        </div>
+                        <button type="button" class="btny" onclick="addStep('featureContainer', 'feature_steps[]', 'Feature')">Add More</button>
+
                   </div>
-                  <button type="button" class="btny" onclick="addStep('featureContainer', 'feature_steps[]', 'Feature')">Add Feature Step</button>
-
                   
+                  <!--  Installation -->
+                  <div class="intallation special">
+                        <h3 class="title">Installation</h3>
 
+                        <div id="installationContainer">
+                        <input type="text" name="installation_steps[]" placeholder="Step 1" class="inp">
+                        </div>
+                    <button type="button" class="btny" onclick="addStep('installationContainer', 'installation_steps[]', 'Installation')">Next Step</button>
+        
+                  </div>
+                  
+                <!-- Usage  -->
+               <div class="usage special">
+                    <h3 class="title">Usage</h3>
+                    <div id="usageContainer">
+                        <input type="text" name="usage_steps[]" placeholder="Usage 1" class="inp">
+                    </div>
+                    <button type="button" class="btny" onclick="addStep('usageContainer', 'usage_steps[]', 'Usage')">Add More</button>
 
-                <h3 class="title">Installation</h3>
-                {% comment %} <div id="inputContainer">
-                  <input type="text" name="steps" placeholder="1">
+               </div>
+
+                <!-- Contributions  -->
+                <div class="contribution special">
+                        <h3 class="title">Contributions</h3>
+                    <div id="contributionContainer">
+                        <input type="text" name="contribution_steps[]" placeholder="Contribution Step - 1" class="inp">
+                    </div>
+                    <button type="button" class="btny" onclick="addStep('contributionContainer', 'contribution_steps[]', 'Contribution')">Next Step</button>
+
                 </div>
-                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
-                <div id="installationContainer">
-                  <input type="text" name="installation_steps[]" placeholder="Installation Step 1">
-              </div>
-              <button type="button" class="btny" onclick="addStep('installationContainer', 'installation_steps[]', 'Installation')">Add Installation Step</button>
 
-                {% comment %} <h3 class="title">Usage</h3>
-                <div id="inputContainer">
-                  <input type="text" name="steps" placeholder="1">
-                </div>
-
-                <button type="button" onclick="addStep()">Add More Steps</button> {% endcomment %}
-                <!-- Usage Section -->
-                <h3 class="title">Usage</h3>
-                <div id="usageContainer">
-                    <input type="text" name="usage_steps[]" placeholder="Usage Step 1">
-                </div>
-                <button type="button" class="btny" onclick="addStep('usageContainer', 'usage_steps[]', 'Usage')">Add Usage Step</button>
-
-                <!-- Contributions Section -->
-                <h3 class="title">Contributions</h3>
-                <div id="contributionContainer">
-                    <input type="text" name="contribution_steps[]" placeholder="Contribution Step 1">
-                </div>
-                <button type="button" class="btny" onclick="addStep('contributionContainer', 'contribution_steps[]', 'Contribution')">Add Contribution Step</button>
-
-                {% comment %} <h3 class="title">Support Me </h3> {% endcomment %}
-
-                {% comment %} <h3 class="title">Built With</h3> {% endcomment %}
-
+            </div class="last">
                 <input type="submit" value="Submit" class="btnx">
             </form>
         </div>
